@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    tools:context=".activities.HomeActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/tioid"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/shape_rect01"
+        android:backgroundTint="#00CCCC"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Shop2Order"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/tl1"
+        android:layout_width="381dp"
+        android:layout_height="109dp"
+        android:layout_below="@id/tioid"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="126dp"
+                android:layout_height="109dp"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/users" />
+
+
+            <ImageView
+                android:layout_width="126dp"
+                android:layout_height="109dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/shopkeeper" />
+        </TableRow>
+    </TableLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/tl1">
+
+
+        <Button
+            android:id="@+id/ubtn"
+            android:layout_width="136dp"
+            android:layout_height="44dp"
+            android:backgroundTint="#AFEEEE"
+            android:drawableStart="@drawable/ic_user_black"
+            android:fontFamily="@font/baloo_bhaijaan"
+            android:text="USER"
+            android:textSize="12dp"
+            android:textColor="#1E1E1E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.152"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/sbtn"
+            android:layout_width="136dp"
+            android:layout_height="44dp"
+            android:backgroundTint="#AFEEEE"
+            android:drawableStart="@drawable/ic_shopkeeper_black"
+            android:text="SHOPKEEPER"
+            android:textSize="12dp"
+            android:textColor="#1E1E1E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toEndOf="@+id/ubtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:fontFamily="@font/baloo_bhaijaan" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:id="@+id/tl2"
+        android:layout_width="381dp"
+        android:layout_height="109dp"
+        android:layout_below="@id/cl1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp">>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="126dp"
+                android:layout_height="109dp"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/admin"
+                android:paddingLeft="30dp"/>
+        </TableRow>
+    </TableLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:id="@+id/layout"
+        android:layout_below="@id/tl2">
+
+        <Button
+            android:id="@+id/abtn"
+            android:layout_width="136dp"
+            android:layout_height="44dp"
+            android:backgroundTint="#AFEEEE"
+            android:drawableStart="@drawable/ic_admin_black"
+            android:text="ADMIN"
+            android:textSize="12dp"
+            android:textColor="#1E1E1E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.018"
+            android:fontFamily="@font/baloo_bhaijaan"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:layout_below="@+id/layout"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/aboutUs"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="15dp"
+            android:textStyle="bold"
+            android:text="ABOUT US"
+            android:textSize="10sp"
+            android:drawablePadding="5dp"
+            android:gravity="start|center"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/buttonhome"
+            android:drawableLeft="@drawable/ic_info_white"
+            android:paddingLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/contactUs"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="80dp"
+                android:layout_toEndOf="@+id/aboutUs"
+                android:background="@drawable/buttonhome"
+                android:drawableStart="@drawable/ic_contact_white"
+                android:drawablePadding="5dp"
+                android:gravity="start|center"
+                android:paddingLeft="10dp"
+                android:text="CONTACT US"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+            android:id="@+id/privacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:textStyle="bold"
+            android:text="PRIVACY POLICY"
+            android:textSize="10sp"
+            android:drawablePadding="5dp"
+            android:gravity="start|center"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/buttonhome"
+            android:layout_toEndOf="@+id/contactUs"
+            android:layout_marginStart="10dp"
+            android:paddingEnd="5dp"
+            android:drawableStart="@drawable/ic_privacy_white"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/Terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:textStyle="bold"
+            android:text="TERMS AND CONDITIONS"
+            android:textSize="10sp"
+            android:drawablePadding="5dp"
+            android:gravity="start|center"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/buttonhome"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/privacyPolicy"
+            android:layout_marginStart="10dp"
+            android:paddingEnd="5dp"
+            android:drawableStart="@drawable/ic_terms_white"
+            android:paddingLeft="10dp"/>
+
+        </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout >

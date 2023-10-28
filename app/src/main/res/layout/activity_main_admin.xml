@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.adminactivities.MainAdminActivity"
+    android:background="@color/colorGray00">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/shape_rect01"
+        android:backgroundTint="@color/colorAccent">
+
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="ADMIN"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+        <ImageButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@null"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/moreBtn"
+            android:src="@drawable/ic_logout_white" />
+
+        <ImageButton
+            android:id="@+id/moreBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:src="@drawable/ic_more_white" />
+
+        <!--Tabs: Shopkeepers,Users-->
+        <LinearLayout
+            android:id="@+id/tabLl"
+            android:layout_below="@+id/nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_rect03"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+            <!--shops-->
+            <TextView
+                android:id="@+id/tabShopsTv"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_rect04"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="SHOPKEEPERS"
+                android:textSize="15dp"
+                android:textColor="@color/colorBlack" />
+            <!--Orders-->
+            <TextView
+                android:id="@+id/tabUsersTv"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="USERS"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+        <!--Shops UI-->
+        <RelativeLayout
+            android:id="@+id/shopsRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbarRl">
+
+
+            <RelativeLayout
+                android:id="@id/actionRl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/searchShopEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/shape_rect04"
+                    android:drawableStart="@drawable/ic_search_gray"
+                    android:drawablePadding="10dp"
+                    android:hint="Search with name or city"
+                    android:maxLines="1"
+                    android:padding="10dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/actionRl1">
+
+                <ScrollView
+                    android:id="@+id/scrollView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/shopsRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:reverseLayout="true"
+                        app:stackFromEnd="true"
+                        tools:listitem="@layout/row_admin_shop" />
+                </ScrollView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!--Users UI-->
+        <RelativeLayout
+            android:id="@+id/UsersRl"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbarRl">
+
+          <RelativeLayout
+              android:id="@id/actionRl"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <EditText
+                  android:id="@+id/searchUserEt"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginTop="5dp"
+                  android:layout_marginEnd="15dp"
+                  android:layout_marginBottom="5dp"
+                  android:background="@drawable/shape_rect04"
+                  android:drawableStart="@drawable/ic_search_gray"
+                  android:drawablePadding="10dp"
+                  android:hint="Search with name or city"
+                  android:maxLines="1"
+                  android:padding="10dp" />
+
+
+          </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/actionRl">
+
+                <ScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--recycleview: show orders(newest first)-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/usersRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:reverseLayout="true"
+                        app:stackFromEnd="true"
+                        tools:listitem="@layout/row_admin_user" />
+
+                </ScrollView>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "392338644803",
+    "firebase_url": "https://shop2order-a8597-default-rtdb.firebaseio.com",
+    "project_id": "shop2order-a8597",
+    "storage_bucket": "shop2order-a8597.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392338644803:android:3500b3cd5347166928d9f6",
+        "android_client_info": {
+          "package_name": "com.example.logreg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "392338644803-1drbtme2te9r1nn09jg74noan08r8gtj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw0MyoGhOukweLjI9809dX85j3WfyeBBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "392338644803-1drbtme2te9r1nn09jg74noan08r8gtj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392338644803:android:daeb0a3ec6ce5cc928d9f6",
+        "android_client_info": {
+          "package_name": "com.example.shop2order"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "392338644803-1drbtme2te9r1nn09jg74noan08r8gtj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw0MyoGhOukweLjI9809dX85j3WfyeBBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "392338644803-1drbtme2te9r1nn09jg74noan08r8gtj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

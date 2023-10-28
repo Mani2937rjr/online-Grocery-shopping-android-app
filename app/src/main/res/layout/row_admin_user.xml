@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardBackgroundColor="#FEF7F7"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_person_gray"
+            app:civ_border_overlay="true"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/colorGray02"/>
+
+        <!--online/offline status-->
+        <ImageView
+            android:id="@+id/onlineIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/shape_circle03" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/nextIv"
+            android:layout_toEndOf="@+id/profileIv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:text="Name"
+                android:textSize="17sp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/addressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="5dp"
+                android:drawableStart="@drawable/ic_location_gray"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/phoneTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="+919978098888"
+                android:drawableStart="@drawable/ic_phone_gray"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:autoLink="all"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/colorBlack" />
+
+
+            <TextView
+                android:id="@+id/emailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="abc@gmail.com"
+                android:autoLink="all"
+                android:drawableStart="@drawable/ic_mail_gray"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/userBlockTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/shape_rect06"
+                android:layout_marginLeft="150dp"
+                android:paddingEnd="10dp"
+                android:text=" Blocked"
+                android:textColor="@color/colorRed"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/nextIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_next_gray"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
